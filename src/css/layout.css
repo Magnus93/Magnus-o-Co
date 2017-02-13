@@ -3,29 +3,19 @@ body {
 }
 
 .baseContainer {
-    width: calc(100%  /3);
+    width: 33%;
     height: 1080px;
     background: #E0E0E0;
+    float: left;
+    display: inline-block;
 }
 
 .orderFields {
     background: #EFDC9F;
-    width: 100%;
+    width: auto;
     height: 1080px;
-    border: 10px solid #E0E0E0;
+    margin: 5px;
     padding: 15px;
-}
-
-#left {
-    float:left;
-}
-
-#mid {
-    display: inline-block;
-}
-
-#right {
-    float:right;
 }
 
 #food {
@@ -33,6 +23,5 @@ body {
 }
 
 #help {
-    border-top: hidden;
-    height: 16%;
+    height: 17%;
 }
