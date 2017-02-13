@@ -2,36 +2,39 @@ body {
     background-color: #E0E0E0;
 }
 
-.orderFields {
+.baseContainer {
     width: calc(100%  /3);
     height: 1080px;
-    border: 5px solid #E0E0E0;
+    background: #E0E0E0;
+
+}
+
+.orderFields {
     background: #EFDC9F;
+    width: 100%;
+    height: 1080px;
+    border: 10px solid #E0E0E0;
+    padding: 15px;
 }
 
 #left {
- 
     float:left;
 }
 
 #mid {
-    margin: auto;
+    display: inline-block;
 }
 
 #right {
- 
     float:right;
 }
 
 #food {
-    width: 100%;
     height: 80%;
 }
 
 #help {
- 
-    border-style: hidden;
-    border-top: thick solid #E0E0E0;
-    width: auto;
-    height: auto;
+    border-top: 0px;
+  
+    height: 16%;
 }
