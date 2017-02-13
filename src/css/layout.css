@@ -1,0 +1,27 @@
+body {
+    background-color: #E0E0E0;
+}
+
+.baseContainer {
+    width: 33%;
+    height: 1080px;
+    background: #E0E0E0;
+    float: left;
+    display: inline-block;
+}
+
+.orderFields {
+    background: #EFDC9F;
+    width: auto;
+    height: 1080px;
+    margin: 5px;
+    padding: 15px;
+}
+
+#food {
+    height: 80%;
+}
+
+#help {
+    height: 17%;
+}
