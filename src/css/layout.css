@@ -3,19 +3,14 @@ body {
 }
 
 .orderFields {
-    border: 5px solid #FF0000;
-}
-
-
-.orderFields {
     width: calc(100%  /3);
     height: 1080px;
     border: 5px solid #E0E0E0;
     background: #EFDC9F;
-    padding: 10px;
 }
 
 #left {
+ 
     float:left;
 }
 
@@ -24,6 +19,7 @@ body {
 }
 
 #right {
+ 
     float:right;
 }
 
@@ -33,6 +29,9 @@ body {
 }
 
 #help {
-    width: 100%;
+ 
+    border-style: hidden;
+    border-top: thick solid #E0E0E0;
+    width: auto;
     height: auto;
 }
