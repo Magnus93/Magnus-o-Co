@@ -1,45 +1,33 @@
-.orderFields {
+body {
+    background-color: #E0E0E0;
+}
 
+.orderFields {
     border: 5px solid #FF0000;
 }
 
-#mainDiv {
-    width: 100%;
-    height: 800px;
-    background: #FFF;
-    border: 5px solid #000;
-}
 
 .orderFields {
     width: calc(100%  /3);
     height: 100%;
     border: 5px solid #000;
-
+    background: #EFDC9F;
 }
 
 #food {
     float:left;
-    background: #F00;
-  
 }
 
 #order {
-    width: 33%;
     margin: auto;
-    background: #0F0;
- 
 }
 
 #drinks {
     float:right;
-    background: #00F;
-
 }
 
 #help {
-    float:left;
-    width: calc(100%  /3);
-    height: 100%;
-    border: 5px solid #000;
-    background: #F0F;
+    border-top: thick single #000
+    width: 100%;
+    height: 20%;
 }
