@@ -7,26 +7,19 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/layout.css">
 
-    <!-- Script imports !-->
-    <script src="/vue/vue.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="js/nationPub.js"></script>
-    <script src="js/diner.js"></script>
-
-    <script src="js/populatePage.js"></script>
-    <script src="js/commonFunctions.js"></script>
-    <script>
-      docLoaded(indexIsLoaded); // This has not yet been defined
-    </script>
   </head>
-
-
+     
   <body>
-
     <div id="food_area" class="baseContainer">
 
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
+        <div v-for="item in menu.food" class="item foodItem">
+          <h4>{{ item.name }}</h4>
+          <img :src="'img/' + item.img" alt="">
+          <p class="price">{{ item.price }} kr</p>
+        </div>
+
       </div>
 
       <div id="help" class="orderFields">
@@ -63,6 +56,19 @@
       </div>
 
     </div>
+    
+    <!-- Script imports !-->
+    <script src="/vue/vue.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/nationPub.js"></script>
+    <script src="js/diner.js"></script>
+
+    <script src="data/menu.json"></script>
+    <script src="js/populatePage.js"></script>
+    <script src="js/commonFunctions.js"></script>
+    <script>
+      docLoaded(indexIsLoaded); // This has not yet been defined
+    </script>
   </body>
 
 </html>
