@@ -1,3 +1,12 @@
+:root {
+  --back-color: black;
+  --back-color: black;
+  --back-color: black;
+  --back-color: black;
+}
+
+
+
 body {
     background-color: #E0E0E0;
     overflow: hidden;
@@ -25,4 +34,15 @@ body {
 
 #help {
     height: 11.1%;
+}
+
+.item {
+    width: 25%;
+    border: double cornflowerblue 2px;
+  display: inline-block;
+}
+
+.item > img {
+    height: 100%;
+    width: 100%;
 }
