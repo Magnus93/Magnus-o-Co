@@ -20,10 +20,67 @@ body {
     color: #000;
 }
 
+.orderButtons {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    position: relative;
+    border: solid 5px;
+}
+
+.orderButtons:active {
+    background-color: #3e8e41;
+}
+
+#orderList {
+    overflow: auto;
+    width: 350px;
+    height:350px;
+    background: #E0E0E0;
+    color: #000;
+    position: relative;
+    left: 18%;
+    border: solid 5px;
+}
+
+#totalSum {
+    overflow: auto;
+    width: 350px;
+    height:auto;
+    background: #E0E0E0;
+    color: #000;
+    position: relative;
+    left: 18%;
+    border: solid 5px;
+    border-top: hidden;
+}
+
+
 #food {
     height: 80%;
 }
 
 #help {
     height: 11.1%;
+}
+
+#cardButton {
+    width: 350px;
+    height: 150px;
+    left: 18%;
+    border-radius: 100px;
+}
+
+#miscButton {
+    width: 250px;
+    height: 100px;
+    left: 27%;
+    border-radius: 50px;
+    font-size: 2em;
 }
