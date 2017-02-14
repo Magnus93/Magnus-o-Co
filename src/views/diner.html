@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+  <head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+
+    <!-- Script imports !-->
+    <script src="/vue/vue.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/nationPub.js"></script>
+    <script src="js/diner.js"></script>
+
+    <script src="js/populatePage.js"></script>
+    <script src="js/commonFunctions.js"></script>
+    <script>
+      docLoaded(indexIsLoaded); // This has not yet been defined
+    </script>
+  </head>
+
+  
+  <body>
+
+    <div id="food_area" class="baseContainer">
+    
+      <div id="food" class="orderFields">
+        <!-- Food things goes in here !-->
+      </div>
+      
+      <div id="help" class="orderFields">
+        <!-- Help things goes in here !-->
+      </div>
+      
+    </div>
+ 
+    <div id="drink_area" class="baseContainer">
+      
+      <div id="drinks" class="orderFields">
+        <!-- Drink things goes in here !-->
+      </div>
+      
+    </div>
+ 
+    <div id="order_area" class="baseContainer">
+      
+      <div id="order" class="orderFields">
+          <!-- Order things goes in here !-->
+      </div>
+      
+    </div>
+  </body>
+  
+</html>
+
+
+
