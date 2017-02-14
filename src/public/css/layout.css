@@ -122,7 +122,7 @@ body {
 }
 
 input {
-    width: 270px;
+    width: 190px;
     height: 40px;
     display: inline-block;
     font-size: 38px;
@@ -131,3 +131,27 @@ input {
 #table_input {
 }
 
+container {
+    width: 600px;
+    border: none;
+    display: inline-block;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background: goldenrod;
+    float: none;
+}
+
+.num {
+    margin-top: 18px;
+}
+
+#reset_btn {
+    padding-left: 8px;
+}
