@@ -1,3 +1,10 @@
+:root {
+  --back-color: black;
+  --back-color: black;
+  --back-color: black;
+  --back-color: black;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
@@ -29,6 +36,16 @@ body {
 #help {
     height: 11.1%;
 }
+
+.item {
+    width: 25%;
+    border: double cornflowerblue 2px;
+  display: inline-block;
+}
+
+.item > img {
+    height: 100%;
+    width: 100%;
 
 #order {
     text-align: center;
