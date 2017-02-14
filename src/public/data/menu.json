@@ -1,8 +1,8 @@
-var menuData = {
+{
   "food": [
     {
       "name": "XL Burger",
-      "img": "burger.png",
+      "img": "img/burger.png",
       "price": 40
     }
   ],
