@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
+    font-family: 'Open Sans', sans-serif;
     background-color: #E0E0E0;
     overflow: hidden;
 }
@@ -25,4 +28,24 @@ body {
 
 #help {
     height: 11.1%;
+}
+
+#order {
+    text-align: center;
+}
+
+.section_header {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+input {
+    width: 270px;
+    height: 40px;
+    display: inline-block;
+    font-size: 38px;
+}
+
+#table_input {
+    ;
 }
