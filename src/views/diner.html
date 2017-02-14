@@ -14,8 +14,11 @@
         <!-- Food things goes in here !-->
         <div v-for="item in menu.food" class="item foodItem">
           <h4>{{ item.name }}</h4>
-          <img :src="'img/' + item.img" alt="">
-          <p class="price">{{ item.price }} kr</p>
+          <button type="button">
+            <img :src="'img/' + item.img" alt="burger should be displayed here">
+            <p class="price">{{ item.price }} kr</p>
+          </button>
+
         </div>
 
       </div>
@@ -61,7 +64,7 @@
     <script src="js/nationPub.js"></script>
     <script src="js/diner.js"></script>
 
-    <script src="data/menu.json"></script>
+    <script src="data/menu.js"></script>
     <script src="js/populatePage.js"></script>
     <script src="js/commonFunctions.js"></script>
     <script>
