@@ -46,6 +46,7 @@ body {
 .item > img {
     height: 100%;
     width: 100%;
+}
 
 #order {
     text-align: center;
