@@ -1,0 +1,13 @@
+{
+  "food": [
+    {
+      "name": "XL Burger",
+      "img": "burger.jpg",
+      "price": 40
+    }
+  ],
+
+  "drinks": [
+
+  ]
+}
