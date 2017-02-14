@@ -4,6 +4,26 @@ var menuData = {
       name: "XL Burger",
       img: "burger.png",
       price: 40
+    },
+    {
+      name: "Taco",
+      img: "taco.png",
+      price: 110
+    },
+    {
+      name: "Pizza",
+      img: "taco.png",
+      price: 110
+    },
+    {
+      name: "Taco",
+      img: "taco.png",
+      price: 110
+    },
+    {
+      name: "Taco",
+      img: "taco.png",
+      price: 110
     }
   ],
 

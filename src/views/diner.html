@@ -13,11 +13,20 @@
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
         <div v-for="item in menu.food" class="item foodItem">
-          <h4>{{ item.name }}</h4>
           <button type="button">
-            <img :src="'img/' + item.img" alt="burger should be displayed here">
+            <h4>{{ item.name }}</h4>
+            <img :src="'img/' + item.img" alt="food should be displayed here">
             <p class="price">{{ item.price }} kr</p>
           </button>
+          <div class="itemOptions">
+            <button type="button">
+              <img src="img/remove.png" alt="">
+            </button>
+            <div class="itemAmount"><p>14</p></div>
+            <button type="button">
+              <img src="img/info.png" alt="">
+            </button>
+          </div>
 
         </div>
 
