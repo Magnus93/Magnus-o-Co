@@ -5,9 +5,10 @@
   --back-color: black;
 }
 
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
+    font-family: 'Open Sans', sans-serif;
     background-color: #E0E0E0;
     overflow: hidden;
 }
@@ -45,4 +46,22 @@ body {
 .item > img {
     height: 100%;
     width: 100%;
+
+#order {
+    text-align: center;
+}
+
+.section_header {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+input {
+    width: 270px;
+    height: 40px;
+    display: inline-block;
+    font-size: 38px;
+}
+
+#table_input {
 }

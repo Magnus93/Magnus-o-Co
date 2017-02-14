@@ -7,14 +7,11 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/layout.css">
 
-
   </head>
-
-  
-  <body id="body">
-
+     
+  <body>
     <div id="food_area" class="baseContainer">
-    
+
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
         <div v-for="item in menu.food" class="item foodItem">
@@ -24,28 +21,42 @@
         </div>
 
       </div>
-      
+
       <div id="help" class="orderFields">
         <!-- Help things goes in here !-->
       </div>
-      
+
     </div>
- 
+
     <div id="drink_area" class="baseContainer">
-      
+
       <div id="drinks" class="orderFields">
         <!-- Drink things goes in here !-->
       </div>
-      
+
     </div>
- 
+
     <div id="order_area" class="baseContainer">
-      
+
       <div id="order" class="orderFields">
-          <!-- Order things goes in here !-->
+        <!-- Order things goes in here !-->
+        <div id="table_num">
+          <!-- Num pad for entering table number goes here !-->
+          <div id="table_input" class="section_header">Table number: <input id="tbl_num">
+          </div>
+        </div>
+
+        <div id="order_summary">
+          <!-- The order order summary goes here !-->
+        </div>
+
+        <div id="order_buttons">
+          <!-- The various order buttons goes here !-->
+        </div>
       </div>
-      
+
     </div>
+    
     <!-- Script imports !-->
     <script src="/vue/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
@@ -59,7 +70,7 @@
       docLoaded(indexIsLoaded); // This has not yet been defined
     </script>
   </body>
-  
+
 </html>
 
 
