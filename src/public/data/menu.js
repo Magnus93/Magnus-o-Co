@@ -2,52 +2,52 @@ var menuData = {
   food: [
     {
       name: "Hamburgare",
-      img: "burger.png",
+      id: "burger",
       price: 63
     },
     {
       name: "Ostburgare",
-      img: "cheeseBurger.png",
+      id: "cheeseBurger",
       price: 63
     },
     {
       name: "Nötstek",
-      img: "steakBurger.png",
+      id: "steakBurger",
       price: 75
     },
     {
       name: "Halloumiburgare",
-      img: "halloumiBurger.png",
+      id: "halloumiBurger",
       price: 60
     },
     {
       name: "Laxsallad",
-      img: "salmonSalad.png",
+      id: "salmonSalad",
       price: 69
     },
     {
       name: "Chèvresallad",
-      img: "chevreSalad.png",
+      id: "chevreSalad",
       price: 69
     },
     {
       name: "Halloumisallad",
-      img: "halloumiSalad.png",
+      id: "halloumiSalad",
       price: 69
     },
     {
       name: "Kikärtssallad",
-      img: "chickpeaSalad.png",
+      id: "chickpeaSalad",
       price: 69
     },
     {
       name: "Nachotallrik",
-      img: "nachos.png",
+      id: "nachos",
       price: 75
     },
     {
       name: "Enchiladas",
-      img: "enchiladas.png",
+      id: "enchiladas",
       price: 49
     }
   ],
@@ -56,61 +56,61 @@ var menuData = {
     {
       category: "beerNWine",
       name: "Öl/Vin",
-      img: "beerNWine.jpg",
+      id: "beerNWine",
       content: [
         {
           name: "Carlsberg (fat)",
-          img: "carlsbergFat.jpg",
+          id: "carlsbergFat",
           price: 33
         },
         {
           name: "Brooklyn (fat)",
-          img: "brooklynFat.jpg",
+          id: "brooklynFat",
           price: 39
         },
         {
           name: "Somersby (fat)",
-          img: "somersbyFat.jpg",
+          id: "somersbyFat",
           price: 33
         },
         {
           name: "Wermlands Ale",
-          img: "wermlandsAle.jpg",
+          id: "wermlandsAle",
           price: 39
         },
         {
           name: "Lagunitas IPA",
-          img: "lagunitas.jpg",
+          id: "lagunitas",
           price: 39
         },
         {
           name: "St. Eriks IPA",
-          img: "stEriksIPA.jpg",
+          id: "stEriksIPA",
           price: 41
         },
         {
           name: "St. Eriks centennial",
-          img: "stEriksCent.jpg",
+          id: "stEriksCent",
           price: 41
         },
         {
           name: "Low Life",
-          img: "lowLife.jpg",
+          id: "lowLife",
           price: 41
         },
         {
           name: "Hoegaarden",
-          img: "hoegaarden.jpg",
+          id: "hoegaarden",
           price: 41
         },
         {
           name: "Hap Flood",
-          img: "hapFlood.jpg",
+          id: "hapFlood",
           price: 46
         },
         {
           name: "Weihenstephan",
-          img: "weihenstephan.jpg",
+          id: "weihenstephan",
           price: 52
         }
       ]
@@ -118,21 +118,21 @@ var menuData = {
     {
       category: "alcoholFree",
       name: "Alkofritt",
-      img: "alcoholFree.jpg",
+      id: "alcoholFree",
       content: [
         {
           name: "Läsk",
-          img: "soda.jpg",
+          id: "soda",
           price: 10
         },
         {
           name: "Carlsberg",
-          img: "carlsbergNonAlc.jpg",
+          id: "carlsbergNonAlc",
           price: 25
         },
         {
           name: "Erdinger Weissbier",
-          img: "erginerNonAlc.jpg",
+          id: "erginerNonAlc",
           price: 25
         }
       ]
@@ -140,21 +140,21 @@ var menuData = {
     {
       category: "ciders",
       name: "Cider",
-      img: "ciders.jpg",
+      id: "ciders",
       content: [
         {
           name: "Somersby",
-          img: "somersby.jpg",
+          id: "somersby",
           price: 37,
         },
         {
           name: "Strongbow",
-          img: "strongbow.jpg",
+          id: "strongbow",
           price: 41
         },
         {
           name: "Old Rosie",
-          img: "oldRosie.jpg",
+          id: "oldRosie",
           price: 25
         }
       ]

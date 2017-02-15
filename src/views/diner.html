@@ -12,17 +12,17 @@
 
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
-        <div v-for="item in menu.food" class="item foodItem">
-          <button type="button">
+        <div v-for="item in menu.food" class="item foodItem" :id="item.id">
+          <button type="button" :onclick="'incrementOrder(\'' + item.id + '\');'">
             <h4>{{ item.name }}</h4>
-            <img :src="'img/food/' + item.img" alt="food should be displayed here">
+            <img :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
             <p class="price">{{ item.price }} kr</p>
           </button>
           <div class="itemOptions">
-            <button type="button">
+            <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
               <img src="img/remove.png" alt="">
             </button>
-            <div class="itemAmount"><p>14</p></div>
+            <div class="itemAmount"></div>
             <button type="button">
               <img src="img/info.png" alt="">
             </button>
@@ -70,7 +70,7 @@
 
         </div>
         !-->
-    </div>
+      </div>
     </div>
 
     <div id="order_area" class="baseContainer">
@@ -144,8 +144,8 @@
     <script src="js/diner.js"></script>
 
     <script src="data/menu.js"></script>
-    <script src="js/populatePage.js"></script>
     <script src="js/commonFunctions.js"></script>
+    <script src="js/populatePage.js"></script>
     <script>
       docLoaded(indexIsLoaded); // This has not yet been defined
     </script>

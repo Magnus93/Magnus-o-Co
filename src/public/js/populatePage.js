@@ -1,4 +1,7 @@
-var commonData = {menu: menuData};
+var commonData = {
+  menu: menuData,
+  orders: {}
+};
 
 
 var foodVM = new Vue({
@@ -6,7 +9,6 @@ var foodVM = new Vue({
   //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
   data: commonData,
   methods: {
-
   }
 });
 
@@ -16,6 +18,5 @@ var drinkVM = new Vue({
   //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
   data: commonData,
   methods: {
-
   }
 });
