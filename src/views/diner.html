@@ -15,7 +15,7 @@
         <div v-for="item in menu.food" class="item foodItem">
           <button type="button">
             <h4>{{ item.name }}</h4>
-            <img :src="'img/' + item.img" alt="food should be displayed here">
+            <img :src="'img/food/' + item.img" alt="food should be displayed here">
             <p class="price">{{ item.price }} kr</p>
           </button>
           <div class="itemOptions">
@@ -39,11 +39,38 @@
     </div>
 
     <div id="drink_area" class="baseContainer">
-
       <div id="drinks" class="orderFields">
         <!-- Drink things goes in here !-->
-      </div>
+        <!-- Test draft for Drinks section
+        <div id="drinkCategories">
+          <div v-for="category in menu.drinks" class="item drinkCategory">
+            <button type="button">
+              <h4>{{ category.name }}</h4>
+              <img :src="'img/' + category.img" alt="drink category here">
+            </button>
+          </div>
+        </div>
 
+        <div id="drinkDisplayArea">
+          <div v-for="category in menu.drinks" class="drinkDisplay">
+          <div v-for="drink in category.content" class="item foodItem">
+            <button type="button">
+              <h4>{{ drink.name }}</h4>
+              <img :src="'img/' + category.category + drink.img" alt="drinks should be displayed here">
+              <p class="price">{{ drink.price }} kr</p>
+            </button>
+            <div class="itemOptions">
+              <button type="button">
+                <img src="img/remove.png" alt="">
+              </button>
+              <div class="itemAmount"><p>14</p></div>
+            </div>
+
+          </div>
+
+        </div>
+        !-->
+    </div>
     </div>
 
     <div id="order_area" class="baseContainer">

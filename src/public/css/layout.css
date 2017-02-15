@@ -111,8 +111,8 @@ body {
 }
 
 .item img {
-    height: 100%;
-    width: 100%;
+  height: 90px;
+  width: 100%;
 }
 
 .itemOptions *{
@@ -130,6 +130,10 @@ body {
   border-radius: 40px;
   border: 1px solid dimgrey;
   width: 35%;
+}
+.itemOptions img {
+  height: 100%;
+  width: 100%;
 }
 
 #order {
