@@ -28,6 +28,57 @@ body {
     height: 1020px;
     margin: 5px;
     padding: 15px;
+    color: #000;
+}
+
+.orderButtons {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+    position: relative;
+    border: solid 5px;
+}
+
+.orderButtons:active {
+    background-color: #3e8e41;
+}
+
+.foodName {
+    text-align: left;
+    
+}
+
+.foodPrice {
+    text-align: right;
+}
+
+#orderList {
+    overflow: auto;
+    width: 350px;
+    height:350px;
+    background: #E0E0E0;
+    color: #000;
+    position: relative;
+    left: 18%;
+    border: solid 5px;
+}
+
+#totalSum {
+    overflow: auto;
+    width: 350px;
+    height:auto;
+    background: #E0E0E0;
+    color: #000;
+    position: relative;
+    left: 18%;
+    border: solid 5px;
+    border-top: hidden;
 }
 
 #food {
@@ -37,6 +88,19 @@ body {
 
 #help {
     height: 11.1%;
+}
+
+#cardButton {
+    width: 350px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+#miscButton {
+    width: 250px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 2em;
 }
 
 .item {
@@ -79,11 +143,36 @@ body {
 
 
 input {
-    width: 270px;
+    width: 190px;
     height: 40px;
     display: inline-block;
     font-size: 38px;
 }
 
 #table_input {
+}
+
+container {
+    width: 600px;
+    border: none;
+    display: inline-block;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background: goldenrod;
+    float: none;
+}
+
+.num {
+    margin-top: 18px;
+}
+
+#reset_btn {
+    padding-left: 8px;
 }

@@ -50,19 +50,62 @@
 
       <div id="order" class="orderFields">
         <!-- Order things goes in here !-->
+
         <div id="table_num">
           <!-- Num pad for entering table number goes here !-->
-          <div id="table_input" class="section_header">Table number: <input id="tbl_num">
+          <div id="table_input" class="section_header">Table number: <input id="tbl_num"><img src="http://downloadicons.net/sites/default/files/power-restart-icon-66510.png" id="reset_btn" width="50" onclick="resetTableNum();"><br>
+            <container>
+              <block onclick="addToTableNum(1);"><p class="num">1</p></block>
+              <block onclick="addToTableNum(2);"><p class="num">2</p></block>
+              <block onclick="addToTableNum(3);"><p class="num">3</p></block>
+              <block onclick="addToTableNum(4);"><p class="num">4</p></block>
+              <block onclick="addToTableNum(5);"><p class="num">5</p></block>
+              <block onclick="addToTableNum(6);"><p class="num">6</p></block>
+              <block onclick="addToTableNum(7);"><p class="num">7</p></block>
+              <block onclick="addToTableNum(8);"><p class="num">8</p></block>
+              <block onclick="addToTableNum(9);"><p class="num">9</p></block>
+              <block onclick="addToTableNum(0);"><p class="num">0</p></block>
+            </container>
           </div>
         </div>
 
         <div id="order_summary">
+          <div id="orderList">
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+          </div>
+          
+          <div id="totalSum">
+            <p>Summa:        5000kr</p>
+          </div>
           <!-- The order order summary goes here !-->
         </div>
 
         <div id="order_buttons">
+          <button class="orderButtons" id="cardButton">Kort</button>
+          <br>
+          <button class="orderButtons" id="miscButton">Övrigt</button>
           <!-- The various order buttons goes here !-->
         </div>
+
       </div>
 
     </div>
