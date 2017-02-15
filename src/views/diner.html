@@ -22,7 +22,7 @@
             <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
               <img src="img/icons/remove.png" alt="">
             </button>
-            <div class="itemAmount"></div>
+            <div class="itemAmount">{{ orders[item.id] }}</div>
             <button type="button">
               <img src="img/icons/info.png" alt="">
             </button>

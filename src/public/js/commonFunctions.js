@@ -1,5 +1,5 @@
 function docLoaded() {
-	initOrders();
+	resetOrder();
 }
 
 function indexIsLoaded() {
@@ -19,24 +19,11 @@ function resetTableNum() {
 /* Functions for taking orders */
 
 /** Initialize the orders so that all items will be 0 */
-function initOrders() {
+function resetOrder() {
   for (var i = 0; i < commonData.menu.food.length; i++) {
     var foodItem = commonData.menu.food[i];
-    commonData.orders[foodItem.id] = 0;
-    updateItemCountHTML(foodItem.id, 0);
+    Vue.set(commonData.orders, foodItem.id, 0);
   }
-}
-
-/**
- * Update the ammount under an item in the page
- * 
- * @param {string} id - The id of the counter to update
- * @param {number} value - The value to update with
- */
-function updateItemCountHTML(id, value) {
-  var item = document.getElementById(id);
-  var counterDiv = item.getElementsByClassName("itemAmount")[0];
-  counterDiv.innerHTML = value;
 }
 
 /**
@@ -45,8 +32,7 @@ function updateItemCountHTML(id, value) {
  * @param {string} id - The id of the item to increment
  */
 function incrementOrder(id) {
-  commonData.orders[id]++;
-  updateItemCountHTML(id, commonData.orders[id]);
+  Vue.set(commonData.orders, id, commonData.orders[id] + 1);
 }
 
 /**
@@ -57,7 +43,6 @@ function incrementOrder(id) {
  */
 function decrementOrder(id) {
   if (commonData.orders[id] > 0) {
-    commonData.orders[id]--;
-    updateItemCountHTML(id, commonData.orders[id]);
+    Vue.set(commonData.orders, id, commonData.orders[id] - 1);
   }
 }
