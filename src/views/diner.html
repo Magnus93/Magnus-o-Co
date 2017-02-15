@@ -98,30 +98,14 @@
 
         <div id="order_summary">
           <div id="orderList">
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <div v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
+              <p class="foodName">- {{ orders[item.id] }} {{ item.name }}:</p>
+              <p class="foodPrice">{{ item.price * orders[item.id] }} kr</p>
+            </div>
           </div>
           
           <div id="totalSum">
-            <p>Summa:        5000kr</p>
+            <p>Summa: {{ totalSum }} kr</p>
           </div>
           <!-- The order order summary goes here !-->
         </div>
