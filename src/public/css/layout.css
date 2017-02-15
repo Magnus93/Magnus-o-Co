@@ -1,28 +1,29 @@
 :root {
-  --back-color: black;
-  --back-color: black;
-  --back-color: black;
-  --back-color: black;
+  --back-color: #f0f0f0;
+  --border-color: #cacaca;
+  --base-color: white;
+  --text-color: black;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #E0E0E0;
+    background-color: var(--back-color);
     overflow: hidden;
 }
 
 .baseContainer {
     width: 33%;
     height: 1080px;
-    background: #E0E0E0;
+    background: var(--back-color);
     float: left;
  
 }
 
 .orderFields {
-    background: #EFDC9F;
+    background: var(--base-color);
+    border: 1px solid var(--border-color);
     width: auto;
     height: 1020px;
     margin: 5px;
@@ -81,7 +82,8 @@ body {
 }
 
 #food {
-    height: 80%;
+  height: 80%;
+  padding: 0px;
 }
 
 #help {
@@ -102,14 +104,36 @@ body {
 }
 
 .item {
-    width: 25%;
-    border: double cornflowerblue 2px;
-    display: inline-block;
+  width: 20%;
+  /*border: double cornflowerblue 2px;*/
+  display: inline-block;
+  margin: 2%;
 }
 
-.item > img {
-    height: 100%;
-    width: 100%;
+.item img {
+  height: 90px;
+  width: 100%;
+}
+
+.itemOptions *{
+  display: inline-block;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.itemOptions div{
+  width: 22%;
+}
+.itemOptions > button {
+  border-radius: 40px;
+  border: 1px solid dimgrey;
+  width: 35%;
+}
+.itemOptions img {
+  height: 100%;
+  width: 100%;
 }
 
 #order {
@@ -120,6 +144,7 @@ body {
     font-weight: bold;
     font-size: 40px;
 }
+
 
 input {
     width: 190px;
