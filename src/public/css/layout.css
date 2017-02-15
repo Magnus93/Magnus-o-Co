@@ -1,23 +1,25 @@
 :root {
-  --back-color: black;
-  --back-color: black;
-  --back-color: black;
-  --back-color: black;
+    --back-color: #f0f0f0;
+    --border-color: #cacaca;
+    --base-color: white;
+    --text-color: black;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #E0E0E0;
+    background-color: var(--back-color);
     overflow: hidden;
     margin: 0.5vh;
 }
 
 .baseContainer {
+
     width: 33vw;
     height: 100vh;
-    background: #E0E0E0;
+
+    background: var(--back-color);
     float: left;
 }
 
@@ -27,6 +29,8 @@ body {
     height: 100vh;
     margin: 0.5vh;
     padding: 1vh 1vw 1vh 1vw;
+    background: var(--base-color);
+    border: 1px solid var(--border-color);
     color: #000;
 }
 
@@ -89,6 +93,7 @@ body {
 
 #food {
     height: 80vh;
+    padding: 0px;
 }
 
 #help {
@@ -118,6 +123,35 @@ body {
 .item > img {
     height: 5vh;
     width: 5vw;
+    display: inline-block;
+    margin: 0.5vh;
+}
+
+.item img {
+    height: 5vh;
+    width: 5vw;
+}
+
+.itemOptions *{
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+.itemOptions div{
+    width: 1vw;
+    height: 1wh;
+}
+.itemOptions > button {
+    border-radius: 40px;
+    border: 1px solid dimgrey;
+    width: 35%;
+}
+.itemOptions img {
+    height: 100%;
+    width: 100%;
 }
 
 #order {
@@ -128,6 +162,7 @@ body {
     font-weight: bold;
     font-size: 5vh;
 }
+
 
 input {
     width: 10wv;

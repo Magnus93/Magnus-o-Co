@@ -12,7 +12,25 @@
 
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
-       
+
+        <div v-for="item in menu.food" class="item foodItem" :id="item.id">
+          <button type="button" :onclick="'incrementOrder(\'' + item.id + '\');'">
+            <h4>{{ item.name }}</h4>
+            <img :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
+            <p class="price">{{ item.price }} kr</p>
+          </button>
+          <div class="itemOptions">
+            <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
+              <img src="img/icons/remove.png" alt="">
+            </button>
+            <div class="itemAmount"></div>
+            <button type="button">
+              <img src="img/icons/info.png" alt="">
+            </button>
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -23,11 +41,38 @@
     </div>
 
     <div id="drink_area" class="baseContainer">
-
       <div id="drinks" class="orderFields">
         <!-- Drink things goes in here !-->
-      </div>
+        <!-- Test draft for Drinks section
+        <div id="drinkCategories">
+          <div v-for="category in menu.drinks" class="item drinkCategory">
+            <button type="button">
+              <h4>{{ category.name }}</h4>
+              <img :src="'img/' + category.img" alt="drink category here">
+            </button>
+          </div>
+        </div>
 
+        <div id="drinkDisplayArea">
+          <div v-for="category in menu.drinks" class="drinkDisplay">
+          <div v-for="drink in category.content" class="item foodItem">
+            <button type="button">
+              <h4>{{ drink.name }}</h4>
+              <img :src="'img/' + category.category + drink.img" alt="drinks should be displayed here">
+              <p class="price">{{ drink.price }} kr</p>
+            </button>
+            <div class="itemOptions">
+              <button type="button">
+                <img src="img/remove.png" alt="">
+              </button>
+              <div class="itemAmount"><p>14</p></div>
+            </div>
+
+          </div>
+
+        </div>
+        !-->
+      </div>
     </div>
 
     <div id="order_area" class="baseContainer">
@@ -101,8 +146,8 @@
     <script src="js/diner.js"></script>
 
     <script src="data/menu.js"></script>
-    <script src="js/populatePage.js"></script>
     <script src="js/commonFunctions.js"></script>
+    <script src="js/populatePage.js"></script>
     <script>
       docLoaded(indexIsLoaded); // This has not yet been defined
     </script>
