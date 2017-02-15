@@ -12,14 +12,7 @@
 
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
-        <div v-for="item in menu.food" class="item foodItem">
-          <h4>{{ item.name }}</h4>
-          <button type="button">
-            <img :src="'img/' + item.img" alt="burger should be displayed here">
-            <p class="price">{{ item.price }} kr</p>
-          </button>
-
-        </div>
+       
 
       </div>
 
@@ -44,7 +37,7 @@
 
         <div id="table_num">
           <!-- Num pad for entering table number goes here !-->
-          <div id="table_input" class="section_header">Table number: <input id="tbl_num"><img src="http://downloadicons.net/sites/default/files/power-restart-icon-66510.png" id="reset_btn" width="50" onclick="resetTableNum();"><br>
+          <div id="table_input" class="section_header">Table number: <input id="tbl_num"><img src="http://downloadicons.net/sites/default/files/power-restart-icon-66510.png" id="reset_btn" onclick="resetTableNum();"><br>
             <container>
               <block onclick="addToTableNum(1);"><p class="num">1</p></block>
               <block onclick="addToTableNum(2);"><p class="num">2</p></block>
