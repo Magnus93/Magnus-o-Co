@@ -93,7 +93,7 @@ body {
 
 #food {
     height: 80vh;
-    padding: 0px;
+    padding: 0.5vh;
 }
 
 #help {
@@ -114,21 +114,18 @@ body {
 }
 
 .item {
-    width: 5wv;
-    height: 5vh;
-    border: double cornflowerblue 0.5vh;
     display: inline-block;
 }
 
 .item > img {
-    height: 5vh;
+    height: 6vh;
     width: 5vw;
     display: inline-block;
     margin: 0.5vh;
 }
 
 .item img {
-    height: 5vh;
+    height: 6vh;
     width: 5vw;
 }
 
@@ -136,22 +133,52 @@ body {
     display: inline-block;
     text-align: center;
     font-size: 2vh;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
+    margin: 1vh 0.1vw 1vh 0.1vw;
 }
 
 .itemOptions div{
     width: 1vw;
-    height: 1wh;
+    height: 2wh;
 }
+
 .itemOptions > button {
-    border-radius: 40px;
-    border: 1px solid dimgrey;
-    width: 35%;
+    border-radius: 5vh;
+    border: 0.5vh solid dimgrey;
+    width: 2vw;
+    height: 4vh;
+  
 }
+
 .itemOptions img {
-    height: 100%;
-    width: 100%;
+    height: 1.5vh;
+    width: auto;
+  
+}
+
+.addFood {
+    height: 14vh;
+    width: 7vw;
+    margin: 1vh 0.2vw 1vh 0.2vw;
+}
+
+.foodImage {
+    height: 6vh;
+    width: 5vw;
+
+}
+
+.foodItem {
+    margin-right: 0.1vh;
+}
+
+.itemAmmount {
+    height: 14vh;
+    width: 7vw;
+}
+
+.addFoodButtonText {
+    font-size: 1vh;
+    margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
 #order {

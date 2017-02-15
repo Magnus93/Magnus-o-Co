@@ -14,10 +14,10 @@
         <!-- Food things goes in here !-->
 
         <div v-for="item in menu.food" class="item foodItem" :id="item.id">
-          <button type="button" :onclick="'incrementOrder(\'' + item.id + '\');'">
-            <h4>{{ item.name }}</h4>
-            <img :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
-            <p class="price">{{ item.price }} kr</p>
+          <button type="button" class="addFood" :onclick="'incrementOrder(\'' + item.id + '\');'">
+            <h4 class="addFoodButtonText">{{ item.name }}</h4>
+            <img class="foodImage" :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
+            <p class="price addFoodButtonText">{{ item.price }} kr</p>
           </button>
           <div class="itemOptions">
             <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
