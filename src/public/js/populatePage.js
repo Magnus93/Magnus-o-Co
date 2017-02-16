@@ -1,6 +1,7 @@
 var commonData = {
   menu: menuData,
-  orders: {}
+  orders: {},
+  askReset: false
 };
 
 
@@ -36,5 +37,13 @@ var orderVM = new Vue({
       }
       return sum;
     }
+  }
+});
+
+var popupVM = new Vue({
+  el: '#popups',
+  //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
+  data: commonData,
+  methods: {
   }
 });
