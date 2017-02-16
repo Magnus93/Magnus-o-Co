@@ -180,3 +180,8 @@ block {
 #reset_btn {
     padding-left: 8px;
 }
+
+/* Hide all Vue code until loaded */
+[v-cloak] {
+  display:none;
+}
