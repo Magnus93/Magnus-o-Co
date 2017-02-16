@@ -8,7 +8,7 @@
   </head>
      
   <body>
-    <div id="food_area" class="baseContainer">
+    <div id="food_area" class="baseContainer" v-cloak>
 
       <div id="food" class="orderFields">
         <!-- Food things goes in here !-->
@@ -23,7 +23,7 @@
             <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
               <img src="img/icons/remove.png" alt="">
             </button>
-            <div class="itemAmount"></div>
+            <div class="itemAmount">{{ orders[item.id] }}</div>
             <button type="button">
               <img src="img/icons/info.png" alt="">
             </button>
@@ -36,11 +36,12 @@
 
       <div id="help" class="orderFields">
         <!-- Help things goes in here !-->
+        <button type="button" id="resetOrder" v-on:click="askReset = true">Avbryt</button>
       </div>
 
     </div>
 
-    <div id="drink_area" class="baseContainer">
+    <div id="drink_area" class="baseContainer" v-cloak>
       <div id="drinks" class="orderFields">
         <!-- Drink things goes in here !-->
         <!-- Test draft for Drinks section
@@ -75,14 +76,20 @@
       </div>
     </div>
 
-    <div id="order_area" class="baseContainer">
+    <div id="order_area" class="baseContainer" v-cloak>
 
       <div id="order" class="orderFields">
         <!-- Order things goes in here !-->
 
         <div id="table_num">
           <!-- Num pad for entering table number goes here !-->
+
           <div id="table_input" class="section_header">Table number: <input id="tbl_num"><img src="http://downloadicons.net/sites/default/files/power-restart-icon-66510.png" id="reset_btn" onclick="resetTableNum();"><br>
+<!--
+          <div id="table_input" class="section_header">
+            Table number: <input id="tbl_num">
+            <img src="img/icons/resetTableNum.png" id="reset_btn" width="50" onclick="resetTableNum();"><br>
+-->
             <container>
               <block onclick="addToTableNum(1);"><p class="num">1</p></block>
               <block onclick="addToTableNum(2);"><p class="num">2</p></block>
@@ -100,30 +107,14 @@
 
         <div id="order_summary">
           <div id="orderList">
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
-            <p class="foodName">Hamburger:</p> <p class="foodPrice"> 100kr</p>
+            <div v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
+              <p class="foodName">- {{ orders[item.id] }} {{ item.name }}:</p>
+              <p class="foodPrice">{{ item.price * orders[item.id] }} kr</p>
+            </div>
           </div>
           
           <div id="totalSum">
-            <p>Summa:        5000kr</p>
+            <p>Summa: {{ totalSum }} kr</p>
           </div>
           <!-- The order order summary goes here !-->
         </div>
@@ -139,6 +130,16 @@
 
     </div>
     
+    <div id="popups" v-cloak>
+      <div id="resetPopup" v-if="askReset">
+        <div id="resetPopupMain">
+          <h1>Avbryt beställning?</h1>
+          <button type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
+          <button type="button" v-on:click="askReset = false">Nej</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Script imports !-->
     <script src="/vue/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
