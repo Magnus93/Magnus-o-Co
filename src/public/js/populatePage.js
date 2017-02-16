@@ -1,11 +1,12 @@
 var commonData = {
   menu: menuData,
-  orders: {}
+  orders: {},
+  askReset: false
 };
 
 
 var foodVM = new Vue({
-  el: '#food',
+  el: '#food_area',
   //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
   data: commonData,
   methods: {
@@ -14,7 +15,7 @@ var foodVM = new Vue({
 
 
 var drinkVM = new Vue({
-  el: '#drinks',
+  el: '#drink_area',
   //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
   data: commonData,
   methods: {
@@ -22,7 +23,7 @@ var drinkVM = new Vue({
 });
 
 var orderVM = new Vue({
-  el: '#order_summary',
+  el: '#order_area',
   //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
   data: commonData,
   methods: {
@@ -36,5 +37,13 @@ var orderVM = new Vue({
       }
       return sum;
     }
+  }
+});
+
+var popupVM = new Vue({
+  el: '#popups',
+  //mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
+  data: commonData,
+  methods: {
   }
 });
