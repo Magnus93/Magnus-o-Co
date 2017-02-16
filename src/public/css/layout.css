@@ -1,8 +1,8 @@
 :root {
-  --back-color: #f0f0f0;
-  --border-color: #cacaca;
-  --base-color: white;
-  --text-color: black;
+    --back-color: #f0f0f0;
+    --border-color: #cacaca;
+    --base-color: white;
+    --text-color: black;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -11,23 +11,26 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--back-color);
     overflow: hidden;
+    margin: 0.5vh;
 }
 
 .baseContainer {
-    width: 33%;
-    height: 1080px;
+
+    width: 33vw;
+    height: 100vh;
+
     background: var(--back-color);
     float: left;
- 
 }
 
 .orderFields {
+    background: #EFDC9F;
+    width: 33vw;
+    height: 100vh;
+    margin: 0.5vh;
+    padding: 1vh 1vw 1vh 1vw;
     background: var(--base-color);
     border: 1px solid var(--border-color);
-    width: auto;
-    height: 1020px;
-    margin: 5px;
-    padding: 15px;
     color: #000;
 }
 
@@ -35,14 +38,18 @@ body {
     background-color: #4CAF50; /* Green */
     border: none;
     color: #000;
-    padding: 15px 32px;
-    margin: 15px;
+    margin: 0.5vh;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 50px;
+    font-size: 7vh;
     position: relative;
-    border: solid 5px;
+    border: solid 0.5vh;
+}
+
+.foodButton {
+    height: 5vh;
+    width: 5vw;
 }
 
 .orderButtons:active {
@@ -60,80 +67,118 @@ body {
 
 #orderList {
     overflow: auto;
-    width: 350px;
-    height:350px;
+    width: 25vw;
+    height: 40vh;
     background: #E0E0E0;
     color: #000;
     position: relative;
-    left: 18%;
-    border: solid 5px;
+    margin: auto;
+    margin-top: 2vh;
+    border: solid 0.5vh;
+    font-size: 2vh;
 }
 
 #totalSum {
     overflow: auto;
-    width: 350px;
-    height:auto;
+    width: 25vw;
+    height: auto;
     background: #E0E0E0;
     color: #000;
     position: relative;
-    left: 18%;
-    border: solid 5px;
+    margin: auto;
+    border: solid 0.5vh;
     border-top: hidden;
+    font-size: 2vh;
 }
 
 #food {
-  height: 80%;
-  padding: 0px;
+    height: 80vh;
+    padding: 0.5vh;
 }
 
 #help {
-    height: 11.1%;
+    height: 20vh;
 }
 
 #cardButton {
-    width: 350px;
-    height: 150px;
-    border-radius: 100px;
+    width: 17vw;
+    height: 13vh;
+    border-radius: 10vh;
 }
 
 #miscButton {
-    width: 250px;
-    height: 100px;
-    border-radius: 50px;
-    font-size: 2em;
+    width: 13vw;
+    height: 8vh;
+    border-radius: 8vh;
+    font-size: 3vh;
 }
 
 .item {
-  width: 20%;
-  /*border: double cornflowerblue 2px;*/
-  display: inline-block;
-  margin: 2%;
+    display: inline-block;
+}
+
+.item > img {
+    height: 6vh;
+    width: 5vw;
+    display: inline-block;
+    margin: 0.5vh;
 }
 
 .item img {
-  height: 90px;
-  width: 100%;
+    height: 6vh;
+    width: 5vw;
 }
 
 .itemOptions *{
-  display: inline-block;
-  text-align: center;
-  font-size: 25px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+    display: inline-block;
+    text-align: center;
+    font-size: 2vh;
+    margin: 1vh 0.1vw 1vh 0.1vw;
 }
 
 .itemOptions div{
-  width: 22%;
+    width: 1vw;
+    height: 2vh;
 }
+
 .itemOptions > button {
-  border-radius: 40px;
-  border: 1px solid dimgrey;
-  width: 35%;
+    border-radius: 5vh;
+    border: 0.5vh solid dimgrey;
+    width: 2vw;
+    height: 4vh;
+    padding: 0;
 }
+
 .itemOptions img {
-  height: 100%;
-  width: 100%;
+    height: 1.5vh;
+    width: auto;
+  
+}
+
+.addFood {
+    height: 14vh;
+    width: 7vw;
+    margin: 1vh 0.2vw 1vh 0.2vw;
+}
+
+.foodImage {
+    height: 6vh;
+    width: 5vw;
+
+}
+
+.foodItem {
+    margin-right: 0.1vh;
+}
+
+.itemAmmount {
+    height: 14vh;
+    width: 7vw;
+}
+
+.addFoodButtonText {
+    font-size: 1vh;
+    margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
 #order {
@@ -142,43 +187,54 @@ body {
 
 .section_header {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 5vh;
 }
 
 
 input {
-    width: 190px;
-    height: 40px;
+    width: 10wv;
+    height: 5vh;
     display: inline-block;
-    font-size: 38px;
+    font-size: 5vh;
 }
 
 #table_input {
+    font-size: 3vh;
+}
+
+#tbl_num {
+    height: 5vh;
+    width: 7vw;
+    font-size: 4vh;
 }
 
 container {
-    width: 600px;
+    width: 28vw;
+    height: 15vh;
     border: none;
     display: inline-block;
-    padding-bottom: 2%;
-    padding-top: 2%;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
 }
 
 block {
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+    width: 4.5vw;
+    height: 6.5vh;
+    margin: 0.3vh;
     background: goldenrod;
     float: none;
 }
 
 .num {
-    margin-top: 18px;
+    margin-top: 1.5vh;
+    font-size: 3vh;
 }
 
 #reset_btn {
-    padding-left: 8px;
+    padding-left: 1vw;
+    width: 4vw;
+    height: 4vh;
 }
 
 #resetOrder {
