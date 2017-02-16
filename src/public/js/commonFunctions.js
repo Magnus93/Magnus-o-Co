@@ -27,6 +27,14 @@ function resetOrder() {
 }
 
 /**
+ * Resets the page for a new order
+ */
+function resetPage() {
+  resetOrder();
+  resetTableNum();
+}
+
+/**
  * Increases the number of items ordered of a certain ID.
  * 
  * @param {string} id - The id of the item to increment
