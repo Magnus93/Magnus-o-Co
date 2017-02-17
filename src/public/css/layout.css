@@ -15,7 +15,6 @@ body {
 }
 
 .baseContainer {
-
     width: 32vw;
     height: 99vh;
     background: var(--back-color);
@@ -57,7 +56,6 @@ body {
 
 .foodName {
     text-align: left;
-
 }
 
 .foodPrice {
@@ -66,7 +64,7 @@ body {
 
 #orderList {
     overflow: auto;
-    width: 25vw;
+    width: 95%;
     height: 38vh;
     background: #E0E0E0;
     color: #000;
@@ -79,7 +77,7 @@ body {
 
 #totalSum {
     overflow: auto;
-    width: 25vw;
+    width: 95%;
     height: auto;
     background: #E0E0E0;
     color: #000;
@@ -194,7 +192,7 @@ body {
 
 
 input {
-    width: 10wv;
+    width: 10vw;
     height: 5vh;
     display: inline-block;
     font-size: 5vh;
@@ -221,8 +219,8 @@ container {
 
 block {
     display: inline-block;
-    width: 4.5vw;
-    height: 6.5vh;
+    width: 7.5vh;
+    height: 7.5vh;
     margin: 0.3vh;
     background: goldenrod;
     float: none;
@@ -235,12 +233,8 @@ block {
 
 #reset_btn {
     padding-left: 1vw;
-    width: 2.6vw;
+    width: 4vh;
     height: 4vh;
-    <<<<<<< HEAD
-        /* padding-left: 8px;*/
-    =======
-    >>>>>>> master
 }
 
 #resetOrder {
