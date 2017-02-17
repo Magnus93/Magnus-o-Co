@@ -3,6 +3,7 @@ function docLoaded() {
 }
 
 function indexIsLoaded() {
+  lol();
 }
 
 function addToTableNum(num) {
