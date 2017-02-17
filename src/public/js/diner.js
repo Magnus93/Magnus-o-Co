@@ -12,19 +12,3 @@ function getOrderNumber() {
   // A better idea would be to let the server decide.
   return "#" + getRandomInt(1, 1000000);
 }
-
-new Vue({
-  el: '#mainID',
-  mixins: [sharedVueStuff], // include stuff that goes to both diner and kitchen
-  methods: {
-    placeOrder: function() {
-      // create an array of checked items to order
-    var orderItems = [].filter.call(document.getElementsByName('item[]'), function(i) {
-      return i.checked;
-    }).map(function(i) {
-      return i.value;
-    });
-      socket.emit('order', {orderId: getOrderNumber(), orderItems: orderItems});
-  }
-  }
-});

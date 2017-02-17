@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 :root {
     --back-color: #f0f0f0;
     --border-color: #cacaca;
     --base-color: white;
     --text-color: black;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -24,9 +24,10 @@ body {
 
 .orderFields {
     background: #EFDC9F;
-    width: 33vw;
-    height: 95.8vh;
-    margin: 0.5vh 0.5vh 0.5vh 0.5vh;
+    width: 95%;
+    height: 95.5%;
+    margin: 0.5vh;
+
     padding: 1vh 1vw 1vh 1vw;
     background: var(--base-color);
     border: 1px solid var(--border-color);
@@ -64,10 +65,14 @@ body {
     text-align: right;
 }
 
+#order_summary {
+    text-align: center;
+}
+
 #orderList {
     overflow: auto;
-    width: 25vw;
-    height: 38vh;
+    width: 100%;
+    height: 40vh;
     background: #E0E0E0;
     color: #000;
     position: relative;
@@ -79,7 +84,7 @@ body {
 
 #totalSum {
     overflow: auto;
-    width: 25vw;
+    width: 100%;
     height: auto;
     background: #E0E0E0;
     color: #000;
@@ -91,18 +96,17 @@ body {
 }
 
 #food {
-    height: 80vh;
+    height: 80%;
     padding: 0.5vh;
 }
 
 #help {
-    height: 14vh;
-
+    height: 13.7%;
 }
 
 #cardButton {
     width: 17vw;
-    height: 13vh;
+    height: 10vh;
     border-radius: 10vh;
 }
 
@@ -192,9 +196,8 @@ body {
     font-size: 5vh;
 }
 
-
 input {
-    width: 10wv;
+    width: 10vw;
     height: 5vh;
     display: inline-block;
     font-size: 5vh;
@@ -221,7 +224,7 @@ container {
 
 block {
     display: inline-block;
-    width: 4.5vw;
+    width: 6.5vh;
     height: 6.5vh;
     margin: 0.3vh;
     background: goldenrod;
@@ -235,12 +238,9 @@ block {
 
 #reset_btn {
     padding-left: 1vw;
-    width: 2.6vw;
+    width: 4vh;
     height: 4vh;
-<<<<<<< HEAD
    /* padding-left: 8px;*/
-=======
->>>>>>> master
 }
 
 #resetOrder {
