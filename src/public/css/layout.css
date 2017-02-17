@@ -11,23 +11,23 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--back-color);
     overflow: hidden;
-    margin: 0.5vh;
+    margin: 0.5vh 0.5vh 0.5vh 0.5vh;
 }
 
 .baseContainer {
 
-    width: 33vw;
-    height: 100vh;
-
+    width: 32vw;
+    height: 99vh;
     background: var(--back-color);
     float: left;
 }
 
 .orderFields {
     background: #EFDC9F;
-    width: 95   %;
+    width: 95%;
     height: 95.5%;
     margin: 0.5vh;
+
     padding: 1vh 1vw 1vh 1vw;
     background: var(--base-color);
     border: 1px solid var(--border-color);
@@ -122,22 +122,21 @@ body {
 }
 
 .item > img {
-    height: 6vh;
-    width: 5vw;
+    
     display: inline-block;
     margin: 0.5vh;
 }
 
 .item img {
     height: 6vh;
-    width: 5vw;
+    width: 4.5vw;
 }
 
 .itemOptions *{
     display: inline-block;
     text-align: center;
     font-size: 2vh;
-    margin: 1vh 0.1vw 1vh 0.1vw;
+    margin: 1vh 0.1vw 1vh 0.5vw;
 }
 
 .itemOptions div{
@@ -149,18 +148,21 @@ body {
     border-radius: 5vh;
     border: 0.5vh solid dimgrey;
     width: 2vw;
-    height: 4vh;
+    height: 3.7vh;
     padding: 0;
+    margin-left: 0.4vw;
+    margin-top: 0.1vh;
 }
 
 .itemOptions img {
     height: 1.5vh;
     width: auto;
+    margin: 0.65vh 0.6vw 0.9vh 0.35vw;
   
 }
 
 .addFood {
-    height: 14vh;
+    height: 18vh;
     width: 7vw;
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
@@ -181,7 +183,7 @@ body {
 }
 
 .addFoodButtonText {
-    font-size: 1vh;
+    font-size: 1.2vh;
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
@@ -238,6 +240,7 @@ block {
     padding-left: 1vw;
     width: 4vh;
     height: 4vh;
+   /* padding-left: 8px;*/
 }
 
 #resetOrder {
