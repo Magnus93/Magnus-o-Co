@@ -1,6 +1,7 @@
 var commonData = {
   menu: menuData,
   orders: {},
+  selectedDrinksMenu: {},
   askReset: false
 };
 

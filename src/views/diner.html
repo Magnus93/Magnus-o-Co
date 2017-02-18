@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/layout.css">
 
   </head>
-     
+
   <body>
     <div id="food_area" class="baseContainer" v-cloak>
 
@@ -43,36 +43,37 @@
 
     <div id="drink_area" class="baseContainer" v-cloak>
       <div id="drinks" class="orderFields">
+
         <!-- Drink things goes in here !-->
-        <!-- Test draft for Drinks section
+
         <div id="drinkCategories">
           <div v-for="category in menu.drinks" class="item drinkCategory">
-            <button type="button">
+            <button type="button" :onclick="'setDrinksMenu(\'' + category.id + '\');'" :id="category.id">
               <h4>{{ category.name }}</h4>
-              <img :src="'img/' + category.img" alt="drink category here">
+              <img :src="'img/drinks/' + category.id + '.png'" alt="drink category here">
             </button>
           </div>
         </div>
-
         <div id="drinkDisplayArea">
-          <div v-for="category in menu.drinks" class="drinkDisplay">
-          <div v-for="drink in category.content" class="item foodItem">
-            <button type="button">
+          <h4>{{ selectedDrinksMenu.name }}</h4>
+          <hr>
+          <div v-for="drink in selectedDrinksMenu.content" class="item foodItem">
+            <button type="button" class="addFood" :onclick="'incrementOrder(\'' + drink.id + '\');'">
               <h4>{{ drink.name }}</h4>
-              <img :src="'img/' + category.category + drink.img" alt="drinks should be displayed here">
-              <p class="price">{{ drink.price }} kr</p>
+              <img :src="'img/drinks/' + drink.id + '.png'" alt="drinks should be displayed here">
+              <p class="price addFoodButtonText">{{ drink.price }} kr</p>
             </button>
             <div class="itemOptions">
               <button type="button">
-                <img src="img/remove.png" alt="">
+                <img src="img/icons/remove.png" alt="">
               </button>
-              <div class="itemAmount"><p>14</p></div>
+              <div class="itemAmount">{{ orders[drink.id] }}</div>
+              <button type="button">
+                <img src="img/icons/info.png" alt="">
+              </button>
             </div>
-
           </div>
-
         </div>
-        !-->
       </div>
     </div>
 
@@ -108,7 +109,7 @@
               <p class="foodPrice">{{ item.price * orders[item.id] }} kr</p>
             </div>
           </div>
-          
+
           <div id="totalSum">
             <p>Summa: {{ totalSum }} kr</p>
           </div>
@@ -125,7 +126,7 @@
       </div>
 
     </div>
-    
+
     <div id="popups" v-cloak>
       <div id="resetPopup" v-if="askReset">
         <div id="resetPopupMain">
@@ -151,6 +152,3 @@
   </body>
 
 </html>
-
-
-
