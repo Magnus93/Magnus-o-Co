@@ -181,6 +181,11 @@ body {
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
+#drinkCategories {
+  margin-bottom: 3vh;
+}
+
+
 #order {
     text-align: center;
 }

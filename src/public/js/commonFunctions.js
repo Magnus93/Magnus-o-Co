@@ -37,7 +37,7 @@ function resetPage() {
 
 /**
  * Increases the number of items ordered of a certain ID.
- * 
+ *
  * @param {string} id - The id of the item to increment
  */
 function incrementOrder(id) {
@@ -47,11 +47,19 @@ function incrementOrder(id) {
 /**
  * Decreases the number of items ordered of a certain ID.
  * Does nothing if no items have been ordered of that ID before.
- * 
+ *
  * @param {string} id - The id of the item to decrement
  */
 function decrementOrder(id) {
   if (commonData.orders[id] > 0) {
     Vue.set(commonData.orders, id, commonData.orders[id] - 1);
   }
+}
+
+function setDrinksMenu(id) {
+	for (var i = 0; i < menuData.drinks.length; i++) {
+		if (menuData.drinks[i].id === id) {
+			commonData.selectedDrinksMenu = menuData.drinks[i];
+		}
+	}
 }
