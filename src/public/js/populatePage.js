@@ -2,7 +2,8 @@ var commonData = {
   menu: menuData,
   orders: {},
   activeDrinkCategory: "beerNWine",
-  askReset: false
+  askReset: false,
+  orderPlaced: false
 };
 
 

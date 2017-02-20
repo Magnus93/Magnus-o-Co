@@ -126,7 +126,7 @@
         </div>
 
         <div id="order_buttons">
-          <button class="orderButtons" id="cardButton">Kort</button>
+          <button v-on:click="orderPlaced = true" class="orderButtons" id="cardButton">Kort</button>
           <br>
           <button class="orderButtons" id="miscButton">Övrigt</button>
           <!-- The various order buttons goes here !-->
@@ -137,11 +137,17 @@
     </div>
 
     <div id="popups" v-cloak>
-      <div id="resetPopup" v-if="askReset">
-        <div id="resetPopupMain">
+      <div id="resetPopup" v-if="askReset" class="popup">
+        <div id="resetPopupMain" class="popupMain">
           <h1>Avbryt beställning?</h1>
           <button type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
           <button type="button" v-on:click="askReset = false">Nej</button>
+        </div>
+      </div>
+      <div id="orderPopup" v-if="orderPlaced" class="popup">
+        <div id="orderPopupMain" class="popupMain">
+          <h1>Beställning genomförd</h1>
+          <button type="button" onclick="resetPage()" v-on:click="orderPlaced = false">Ok</button>
         </div>
       </div>
     </div>
