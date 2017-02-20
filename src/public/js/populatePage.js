@@ -1,7 +1,7 @@
 var commonData = {
   menu: menuData,
   orders: {},
-  selectedDrinksMenu: {},
+  activeDrinkCategory: "beerNWine",
   askReset: false
 };
 
