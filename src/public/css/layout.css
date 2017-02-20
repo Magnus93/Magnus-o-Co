@@ -181,6 +181,11 @@ body {
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
+#drinkCategories {
+  margin-bottom: 3vh;
+}
+
+
 #order {
     text-align: center;
 }
@@ -241,6 +246,10 @@ block {
     font-size: 50px;
 }
 
+.selectedCategory {
+    border: solid 3px green;
+}
+
 /* Hide all Vue code until loaded */
 [v-cloak] {
     display:none;
@@ -248,7 +257,7 @@ block {
 
 
 /* Reset Order Popup */
-#resetPopup {
+.popup {
     z-index: 10000;
     background-color: rgba(128, 128, 128, 0.52);
     height: 100%;
@@ -256,7 +265,7 @@ block {
     position: absolute;
 }
 
-#resetPopupMain {
+.popupMain {
     position: absolute;
     left: 40%;
     top: 40%;
@@ -267,7 +276,7 @@ block {
     text-align: center;
 }
 
-#resetPopupMain button {
+.popupMain button {
     font-size: 1.5vw;
     border-radius: 100%;
     padding: 1vw;
