@@ -63,11 +63,3 @@ function decrementOrder(id) {
     Vue.set(commonData.orders, id, commonData.orders[id] - 1);
   }
 }
-
-function setDrinksMenu(id) {
-	for (var i = 0; i < menuData.drinks.length; i++) {
-		if (menuData.drinks[i].id === id) {
-			commonData.selectedDrinksMenu = menuData.drinks[i];
-		}
-	}
-}
