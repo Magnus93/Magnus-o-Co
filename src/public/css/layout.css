@@ -246,6 +246,10 @@ block {
     font-size: 50px;
 }
 
+.selectedCategory {
+    border: solid 3px green;
+}
+
 /* Hide all Vue code until loaded */
 [v-cloak] {
     display:none;
