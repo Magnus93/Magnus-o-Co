@@ -75,6 +75,7 @@ body {
     font-size: 2vh;
 }
 
+
 #totalSum {
     overflow: auto;
     width: 95%;
@@ -138,22 +139,6 @@ body {
     height: 2vh;
 }
 
-.itemOptions > button {
-    border-radius: 5vh;
-    border: 0.5vh solid dimgrey;
-    width: 2vw;
-    height: 3.7vh;
-    padding: 0;
-    margin-left: 0.4vw;
-    margin-top: 0.1vh;
-}
-
-.itemOptions img {
-    height: 1.5vh;
-    width: auto;
-    margin: 0.65vh 0.6vw 0.9vh 0.35vw;
-
-}
 
 .addFood {
     height: 18vh;
@@ -181,8 +166,29 @@ body {
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
+/* Drink Category Tabs */
 #drinkCategories {
   margin-bottom: 3vh;
+  border-bottom: solid 2px gray;
+}
+
+.drinkTab {
+  margin-bottom: -3px;
+  display: inline-block;
+  padding: 0 1vw;
+  background-color: buttonface;
+  border: 2px outset buttonface;
+  border-radius: 10% 10% 0 0;
+}
+
+.drinkTab > h4 {
+  text-decoration: underline;
+}
+
+.selectedCategory {
+  border: solid 2px gray;
+  border-bottom-color: transparent;
+  background-color: var(--base-color);
 }
 
 
@@ -211,6 +217,40 @@ input {
     height: 5vh;
     width: 7vw;
     font-size: 4vh;
+}
+
+table.orderTable {
+  width: 100%;
+}
+
+td.orderName {
+  width: 65%;
+  /*border: 1px solid black;*/
+  text-align: left;
+}
+td.orderPrice {
+  text-align: right;
+
+}
+td.orderRemove {
+  width: 8%;
+}
+
+
+button.removeOrInfo {
+  border-radius: 5vh;
+  border: 0.5vh solid dimgrey;
+  width: 2vw;
+  height: 3.7vh;
+  padding: 0;
+  margin-left: 0.4vw;
+  margin-top: 0.1vh;
+}
+
+button.removeOrInfo > img {
+  height: 1.5vh;
+  width: auto;
+  margin: 0.65vh 0.6vw 0.9vh 0.35vw;
 }
 
 container {
@@ -244,10 +284,6 @@ block {
 
 #resetOrder {
     font-size: 50px;
-}
-
-.selectedCategory {
-    border: solid 3px green;
 }
 
 /* Hide all Vue code until loaded */
