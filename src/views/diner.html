@@ -86,8 +86,6 @@
         <div id="table_num">
           <!-- Num pad for entering table number goes here !-->
 
-          <div id="table_input" class="section_header">Table number: <input id="tbl_num"><img src="http://downloadicons.net/sites/default/files/power-restart-icon-66510.png" id="reset_btn" onclick="resetTableNum();"><br>
-
             <container>
               <block onclick="addToTableNum(1);"><p class="num">1</p></block>
               <block onclick="addToTableNum(2);"><p class="num">2</p></block>
@@ -99,7 +97,9 @@
               <block onclick="addToTableNum(8);"><p class="num">8</p></block>
               <block onclick="addToTableNum(9);"><p class="num">9</p></block>
               <block onclick="addToTableNum(0);"><p class="num">0</p></block>
-            </container>
+            </container><br>
+          <div id="table_input" class="section_header">Bordsnummer: <input id="tbl_num"><img src="img/icons/resetTableNum.png" id="reset_btn" onclick="resetTableNum();">
+
           </div>
         </div>
 
