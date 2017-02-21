@@ -5350,11 +5350,20 @@
        xlink:href="#use4774"
        y="0"
        x="0" />
+    <rect
+       y="1844.4211"
+       x="-163.13937"
+       height="28.663559"
+       width="28.663559"
+       id="rect7727"
+       style="fill:#646464;fill-opacity:0.49411765;stroke:#cacaca;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
        inkscape:connector-curvature="0"
        id="path5511"
        d="m -160.79974,1859.2023 23.61544,0"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:6.66994286;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:#aa0000;stroke-width:6.66994286;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <rect
@@ -5381,14 +5390,5 @@
            width="35.02866"
            id="rect5517" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:39.88737869px;line-height:100%;font-family:'TeX Gyre Cursor';-inkscape-font-specification:'TeX Gyre Cursor Bold';text-align:center;text-anchor:middle;fill:#000080;fill-opacity:1"
-         id="flowPara5519">i</flowPara></flowRoot>    <rect
-       y="1844.0548"
-       x="-163.13937"
-       height="28.663559"
-       width="28.663559"
-       id="rect7727"
-       style="fill:#646464;fill-opacity:0.54430377;stroke:#cacaca;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-  </g>
+         id="flowPara5519">i</flowPara></flowRoot>  </g>
 </svg>

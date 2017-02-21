@@ -4,7 +4,6 @@
     <title></title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/layout.css">
-
   </head>
 
   <body>
@@ -20,11 +19,11 @@
             <p class="price addFoodButtonText">{{ item.price }} kr</p>
           </button>
           <div class="itemOptions">
-            <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'">
+            <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo">
               <img src="img/icons/remove.png" alt="">
             </button>
             <div class="itemAmount">{{ orders[item.id] }}</div>
-            <button type="button">
+            <button type="button" class="removeOrInfo">
               <img src="img/icons/info.png" alt="">
             </button>
           </div>
@@ -65,11 +64,11 @@
               <p class="price addFoodButtonText">{{ drink.price }} kr</p>
             </button>
             <div class="itemOptions">
-              <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'">
+              <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo">
                 <img src="img/icons/remove.png" alt="">
               </button>
               <div class="itemAmount">{{ orders[drink.id] }}</div>
-              <button type="button">
+              <button type="button" class="removeOrInfo">
                 <img src="img/icons/info.png" alt="">
               </button>
             </div>
@@ -103,8 +102,35 @@
           </div>
         </div>
 
+
+
+
         <div id="order_summary">
           <div id="orderList">
+            <table class="orderTable">
+              <tr v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
+                <td class="orderName">{{ orders[item.id] }} {{ item.name }}</td>
+                <td class="orderPrice">{{ item.price * orders[item.id] }} kr</td>
+                <td class="orderRemove">
+                  <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo">
+                    <img src="img/icons/remove.png" alt="">
+                  </button>
+                </td>
+              </tr>
+            </table>
+            <table class="orderTable" v-for="category in menu.drinks" class="orderGroup">
+              <tr v-for="drink in category.content" v-if="orders[drink.id] > 0" class="singleOrder">
+                <td class="orderName">{{ orders[drink.id] }} {{ drink.name }}</td>
+                <td class="orderPrice">{{ drink.price * orders[drink.id]}} kr</td>
+                <td class="orderRemove">
+                  <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo">
+                    <img src="img/icons/remove.png" alt="">
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!--<div id="orderList">
             <div v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
               <div class="singleOrder">
                 <p class="foodName">- {{ orders[item.id] }} {{ item.name }}:</p>
@@ -117,7 +143,7 @@
                 <p class="foodPrice">{{ drink.price * orders[drink.id] }} kr</p>
               </div>
             </div>
-          </div>
+          </div>-->
 
           <div id="totalSum">
             <p>Summa: {{ totalSum }} kr</p>
