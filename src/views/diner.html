@@ -45,18 +45,13 @@
 
         <!-- Drink things goes in here !-->
 
-        <div id="drinkCategories">
-          <div v-for="category in menu.drinks" class="item drinkCategory">
-            <button type="button" v-on:click="activeDrinkCategory = category.id" :id="category.id"
-                    :class="{ selectedCategory : activeDrinkCategory === category.id }">
-              <h4>{{ category.name }}</h4>
-              <img :src="'img/drinks/' + category.id + '.png'" alt="drink category here">
-            </button>
+        <nav id="drinkCategories">
+          <div v-for="category in menu.drinks" v-on:click="activeDrinkCategory = category.id" :id="category.id"
+                  class="drinkTab" :class="{ selectedCategory : activeDrinkCategory === category.id }">
+            <h4>{{ category.name }}</h4>
           </div>
-        </div>
+        </nav>
         <div v-for="category in menu.drinks" v-if="activeDrinkCategory === category.id" id="drinkDisplayArea">
-          <h4>{{ category.name }}</h4>
-          <hr>
           <div v-for="drink in category.content" class="item foodItem">
             <button type="button" class="addFood" :onclick="'incrementOrder(\'' + drink.id + '\');'">
               <h4>{{ drink.name }}</h4>
@@ -130,20 +125,6 @@
               </tr>
             </table>
           </div>
-          <!--<div id="orderList">
-            <div v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
-              <div class="singleOrder">
-                <p class="foodName">- {{ orders[item.id] }} {{ item.name }}:</p>
-                <p class="foodPrice">{{ item.price * orders[item.id] }} kr</p>
-              </div>
-            </div>
-            <div v-for="category in menu.drinks" class="orderGroup">
-              <div v-for="drink in category.content" v-if="orders[drink.id] > 0" class="singleOrder">
-                <p class="foodName">- {{ orders[drink.id] }} {{ drink.name }}:</p>
-                <p class="foodPrice">{{ drink.price * orders[drink.id] }} kr</p>
-              </div>
-            </div>
-          </div>-->
 
           <div id="totalSum">
             <p>Summa: {{ totalSum }} kr</p>

@@ -41,6 +41,7 @@ function resetOrder() {
 function resetPage() {
   resetOrder();
   resetTableNum();
+  commonData.activeDrinkCategory = "beerNWine";
 }
 
 /**
