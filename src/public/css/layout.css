@@ -166,8 +166,29 @@ body {
     margin: 1vh 0.2vw 1vh 0.2vw;
 }
 
+/* Drink Category Tabs */
 #drinkCategories {
   margin-bottom: 3vh;
+  border-bottom: solid 2px gray;
+}
+
+.drinkTab {
+  margin-bottom: -3px;
+  display: inline-block;
+  padding: 0 1vw;
+  background-color: buttonface;
+  border: 2px outset buttonface;
+  border-radius: 10% 10% 0 0;
+}
+
+.drinkTab > h4 {
+  text-decoration: underline;
+}
+
+.selectedCategory {
+  border: solid 2px gray;
+  border-bottom-color: transparent;
+  background-color: var(--base-color);
 }
 
 
@@ -263,10 +284,6 @@ block {
 
 #resetOrder {
     font-size: 50px;
-}
-
-.selectedCategory {
-    border: solid 3px green;
 }
 
 /* Hide all Vue code until loaded */
