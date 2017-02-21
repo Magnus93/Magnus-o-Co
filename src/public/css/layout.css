@@ -75,6 +75,7 @@ body {
     font-size: 2vh;
 }
 
+
 #totalSum {
     overflow: auto;
     width: 95%;
@@ -138,22 +139,6 @@ body {
     height: 2vh;
 }
 
-.itemOptions > button {
-    border-radius: 5vh;
-    border: 0.5vh solid dimgrey;
-    width: 2vw;
-    height: 3.7vh;
-    padding: 0;
-    margin-left: 0.4vw;
-    margin-top: 0.1vh;
-}
-
-.itemOptions img {
-    height: 1.5vh;
-    width: auto;
-    margin: 0.65vh 0.6vw 0.9vh 0.35vw;
-
-}
 
 .addFood {
     height: 18vh;
@@ -211,6 +196,40 @@ input {
     height: 5vh;
     width: 7vw;
     font-size: 4vh;
+}
+
+table.orderTable {
+  width: 100%;
+}
+
+td.orderName {
+  width: 65%;
+  /*border: 1px solid black;*/
+  text-align: left;
+}
+td.orderPrice {
+  text-align: right;
+
+}
+td.orderRemove {
+  width: 8%;
+}
+
+
+button.removeOrInfo {
+  border-radius: 5vh;
+  border: 0.5vh solid dimgrey;
+  width: 2vw;
+  height: 3.7vh;
+  padding: 0;
+  margin-left: 0.4vw;
+  margin-top: 0.1vh;
+}
+
+button.removeOrInfo > img {
+  height: 1.5vh;
+  width: auto;
+  margin: 0.65vh 0.6vw 0.9vh 0.35vw;
 }
 
 container {
