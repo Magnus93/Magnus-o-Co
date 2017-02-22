@@ -35,7 +35,7 @@
 
       <div id="help" class="orderFields">
         <!-- Help things goes in here !-->
-        <button type="button" id="resetOrder" v-on:click="askReset = true">Avbryt</button>
+        <button type="button" id="resetOrder" v-on:click="askReset = true">Avbryt<br>Order</button>
       </div>
 
     </div>
@@ -133,9 +133,9 @@
         </div>
 
         <div id="order_buttons">
-          <button v-on:click="orderPlaced = true" class="orderButtons" id="cardButton">Kort</button>
+          <button v-on:click="orderPlaced = true" class="orderButtons" id="cardButton">Kortbetalning</button>
           <br>
-          <button class="orderButtons" id="miscButton">Övrigt</button>
+          <button class="orderButtons" id="miscButton">Övriga betalsätt</button>
           <!-- The various order buttons goes here !-->
         </div>
 
@@ -147,8 +147,8 @@
       <div id="resetPopup" v-if="askReset" class="popup">
         <div id="resetPopupMain" class="popupMain">
           <h1>Avbryt beställning?</h1>
-          <button type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
-          <button type="button" v-on:click="askReset = false">Nej</button>
+          <button id="cancelYes" class="cancelOption" type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
+          <button id="cancelNo" class="cancelOption"  type="button" v-on:click="askReset = false">Nej</button>
         </div>
       </div>
       <div id="orderPopup" v-if="orderPlaced" class="popup">
