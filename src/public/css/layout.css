@@ -50,6 +50,12 @@ body {
     width: 5vw;
 }
 
+button:disabled {
+  opacity: 0.4;
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(30%);
+}
+
 .cancelOption {
     border-bottom: 5px solid #C0C0C0;
     border-right: 2px solid #C0C0C0;
@@ -63,7 +69,7 @@ body {
     border-bottom: 1px solid;
 }
 
-.orderButtons:active {
+.orderButtons:enabled:active {
     background-color: #3e8e41;
     border: 2px solid #C0C0C0;
 }
@@ -162,7 +168,7 @@ body {
     border-radius: 10px;
 }
 
-.addFood:active {
+.addFood:enabled:active {
     margin-top: 10px;
     border-bottom: 1px solid;
 }
@@ -303,7 +309,7 @@ block {
     height: 4vh;
 }
 
-#resetOrder:active {
+#resetOrder:enabled:active {
     margin-top: 10px;
     border-bottom: 1px solid;
 }
