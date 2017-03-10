@@ -7,158 +7,163 @@
   </head>
 
   <body>
-    <div id="food_area" class="baseContainer" v-cloak>
+    <div id="main">
+      <div id="food_area" class="baseContainer" v-cloak>
 
-      <div id="food" class="orderFields">
-        <!-- Food things goes in here !-->
+        <div id="food" class="orderFields">
+          <!-- Food things goes in here !-->
 
-        <div v-for="item in menu.food" class="item foodItem" :id="item.id">
-          <button type="button" class="addFood" :onclick="'incrementOrder(\'' + item.id + '\');'">
-            <h4 class="addFoodButtonText">{{ item.name }}</h4>
-            <img class="foodImage" :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
-            <p class="price addFoodButtonText">{{ item.price }} kr</p>
-          </button>
-          <div class="itemOptions">
-            <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo">
-              <img src="img/icons/remove.png" alt="">
-            </button>
-            <div class="itemAmount">{{ orders[item.id] }}</div>
-            <button type="button" class="removeOrInfo">
-              <img src="img/icons/info.png" alt="">
-            </button>
-          </div>
-
-        </div>
-
-
-      </div>
-
-      <div id="help" class="orderFields">
-        <!-- Help things goes in here !-->
-        <button type="button" id="resetOrder" v-on:click="askReset = true">Avbryt<br>Order</button>
-      </div>
-
-    </div>
-
-    <div id="drink_area" class="baseContainer" v-cloak>
-      <div id="drinks" class="orderFields">
-
-        <!-- Drink things goes in here !-->
-
-        <nav id="drinkCategories">
-          <div v-for="category in menu.drinks" v-on:click="activeDrinkCategory = category.id" :id="category.id"
-                  class="drinkTab" :class="{ selectedCategory : activeDrinkCategory === category.id }">
-            <h4>{{ category.name }}</h4>
-          </div>
-        </nav>
-        <div v-for="category in menu.drinks" v-if="activeDrinkCategory === category.id" id="drinkDisplayArea">
-          <div v-for="drink in category.content" class="item foodItem">
-            <button type="button" class="addFood" :onclick="'incrementOrder(\'' + drink.id + '\');'">
-              <h4>{{ drink.name }}</h4>
-              <img :src="'img/drinks/' + drink.id + '.png'" alt="drinks should be displayed here">
-              <p class="price addFoodButtonText">{{ drink.price }} kr</p>
+          <div v-for="item in menu.food" class="item foodItem" :id="item.id">
+            <button type="button" class="addFood" :onclick="'incrementOrder(\'' + item.id + '\');'">
+              <h4 class="addFoodButtonText">{{ item.name }}</h4>
+              <img class="foodImage" :src="'img/food/' + item.id + '.png'" alt="food should be displayed here">
+              <p class="price addFoodButtonText">{{ item.price }} kr</p>
             </button>
             <div class="itemOptions">
-              <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo">
+              <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo"
+                      :disabled="orders[item.id] === 0">
                 <img src="img/icons/remove.png" alt="">
               </button>
-              <div class="itemAmount">{{ orders[drink.id] }}</div>
+              <div class="itemAmount">{{ orders[item.id] }}</div>
               <button type="button" class="removeOrInfo">
                 <img src="img/icons/info.png" alt="">
               </button>
             </div>
+
+          </div>
+
+
+        </div>
+
+        <div id="help" class="orderFields">
+          <!-- Help things goes in here !-->
+          <button type="button" id="resetOrder" v-on:click="askReset = true">Avbryt<br>Order</button>
+        </div>
+
+      </div>
+
+      <div id="drink_area" class="baseContainer" v-cloak>
+        <div id="drinks" class="orderFields">
+
+          <!-- Drink things goes in here !-->
+
+          <nav id="drinkCategories">
+            <div v-for="category in menu.drinks" v-on:click="activeDrinkCategory = category.id" :id="category.id"
+                    class="drinkTab" :class="{ selectedCategory : activeDrinkCategory === category.id }">
+              <h4>{{ category.name }}</h4>
+            </div>
+          </nav>
+          <div v-for="category in menu.drinks" v-if="activeDrinkCategory === category.id" id="drinkDisplayArea">
+            <div v-for="drink in category.content" class="item foodItem">
+              <button type="button" class="addFood" :onclick="'incrementOrder(\'' + drink.id + '\');'">
+                <h4>{{ drink.name }}</h4>
+                <img :src="'img/drinks/' + drink.id + '.png'" alt="drinks should be displayed here">
+                <p class="price addFoodButtonText">{{ drink.price }} kr</p>
+              </button>
+              <div class="itemOptions">
+                <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo"
+                    :disabled="orders[drink.id] === 0">
+                  <img src="img/icons/remove.png" alt="">
+                </button>
+                <div class="itemAmount">{{ orders[drink.id] }}</div>
+                <button type="button" class="removeOrInfo">
+                  <img src="img/icons/info.png" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="order_area" class="baseContainer" v-cloak>
+
+        <div id="order" class="orderFields">
+          <!-- Order things goes in here !-->
+
+          <div id="table_num">
+            <!-- Num pad for entering table number goes here !-->
+
+              <container>
+                <block onclick="addToTableNum(1);"><p class="num">1</p></block>
+                <block onclick="addToTableNum(2);"><p class="num">2</p></block>
+                <block onclick="addToTableNum(3);"><p class="num">3</p></block>
+                <block onclick="addToTableNum(4);"><p class="num">4</p></block>
+                <block onclick="addToTableNum(5);"><p class="num">5</p></block>
+                <block onclick="addToTableNum(6);"><p class="num">6</p></block>
+                <block onclick="addToTableNum(7);"><p class="num">7</p></block>
+                <block onclick="addToTableNum(8);"><p class="num">8</p></block>
+                <block onclick="addToTableNum(9);"><p class="num">9</p></block>
+                <block onclick="addToTableNum(0);"><p class="num">0</p></block>
+              </container><br>
+            <div id="table_input" class="section_header">Bordsnummer: <input id="tbl_num"><img src="img/icons/resetTableNum.png" id="reset_btn" onclick="resetTableNum();">
+
+            </div>
+          </div>
+
+
+
+
+          <div id="order_summary">
+            <div id="orderList">
+              <table class="orderTable">
+                <tr v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
+                  <td class="orderName">{{ orders[item.id] }} {{ item.name }}</td>
+                  <td class="orderPrice">{{ item.price * orders[item.id] }} kr</td>
+                  <td class="orderRemove">
+                    <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo">
+                      <img src="img/icons/remove.png" alt="">
+                    </button>
+                  </td>
+                </tr>
+              </table>
+              <table class="orderTable" v-for="category in menu.drinks" class="orderGroup">
+                <tr v-for="drink in category.content" v-if="orders[drink.id] > 0" class="singleOrder">
+                  <td class="orderName">{{ orders[drink.id] }} {{ drink.name }}</td>
+                  <td class="orderPrice">{{ drink.price * orders[drink.id]}} kr</td>
+                  <td class="orderRemove">
+                    <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo">
+                      <img src="img/icons/remove.png" alt="">
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="totalSum">
+              <p>Summa: {{ totalSum }} kr</p>
+            </div>
+            <!-- The order order summary goes here !-->
+          </div>
+
+          <div id="order_buttons">
+            <button :onclick="'placeOrder();'" class="orderButtons" id="cardButton"
+              :disabled="!canPlaceOrder">Kortbetalning</button>
+            <br>
+            <button class="orderButtons" id="miscButton" :disabled="!canPlaceOrder">
+              Övriga betalsätt</button>
+            <!-- The various order buttons goes here !-->
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="popups" v-cloak>
+        <div id="resetPopup" v-if="askReset" class="popup">
+          <div id="resetPopupMain" class="popupMain">
+            <h1>Avbryt beställning?</h1>
+            <button id="cancelYes" class="cancelOption" type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
+            <button id="cancelNo" class="cancelOption"  type="button" v-on:click="askReset = false">Nej</button>
+          </div>
+        </div>
+        <div id="orderPopup" v-if="orderPlaced" class="popup">
+          <div id="orderPopupMain" class="popupMain">
+            <h1>Beställning genomförd</h1>
+            <button type="button" onclick="resetPage()" v-on:click="orderPlaced = false">Ok</button>
           </div>
         </div>
       </div>
     </div>
-
-    <div id="order_area" class="baseContainer" v-cloak>
-
-      <div id="order" class="orderFields">
-        <!-- Order things goes in here !-->
-
-        <div id="table_num">
-          <!-- Num pad for entering table number goes here !-->
-
-            <container>
-              <block onclick="addToTableNum(1);"><p class="num">1</p></block>
-              <block onclick="addToTableNum(2);"><p class="num">2</p></block>
-              <block onclick="addToTableNum(3);"><p class="num">3</p></block>
-              <block onclick="addToTableNum(4);"><p class="num">4</p></block>
-              <block onclick="addToTableNum(5);"><p class="num">5</p></block>
-              <block onclick="addToTableNum(6);"><p class="num">6</p></block>
-              <block onclick="addToTableNum(7);"><p class="num">7</p></block>
-              <block onclick="addToTableNum(8);"><p class="num">8</p></block>
-              <block onclick="addToTableNum(9);"><p class="num">9</p></block>
-              <block onclick="addToTableNum(0);"><p class="num">0</p></block>
-            </container><br>
-          <div id="table_input" class="section_header">Bordsnummer: <input id="tbl_num"><img src="img/icons/resetTableNum.png" id="reset_btn" onclick="resetTableNum();">
-
-          </div>
-        </div>
-
-
-
-
-        <div id="order_summary">
-          <div id="orderList">
-            <table class="orderTable">
-              <tr v-for="item in menu.food" v-if="orders[item.id] > 0" class="orderGroup">
-                <td class="orderName">{{ orders[item.id] }} {{ item.name }}</td>
-                <td class="orderPrice">{{ item.price * orders[item.id] }} kr</td>
-                <td class="orderRemove">
-                  <button type="button" :onclick="'decrementOrder(\'' + item.id + '\');'" class="removeOrInfo">
-                    <img src="img/icons/remove.png" alt="">
-                  </button>
-                </td>
-              </tr>
-            </table>
-            <table class="orderTable" v-for="category in menu.drinks" class="orderGroup">
-              <tr v-for="drink in category.content" v-if="orders[drink.id] > 0" class="singleOrder">
-                <td class="orderName">{{ orders[drink.id] }} {{ drink.name }}</td>
-                <td class="orderPrice">{{ drink.price * orders[drink.id]}} kr</td>
-                <td class="orderRemove">
-                  <button type="button" :onclick="'decrementOrder(\'' + drink.id + '\');'" class="removeOrInfo">
-                    <img src="img/icons/remove.png" alt="">
-                  </button>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div id="totalSum">
-            <p>Summa: {{ totalSum }} kr</p>
-          </div>
-          <!-- The order order summary goes here !-->
-        </div>
-
-        <div id="order_buttons">
-          <button v-on:click="orderPlaced = true" class="orderButtons" id="cardButton">Kortbetalning</button>
-          <br>
-          <button class="orderButtons" id="miscButton">Övriga betalsätt</button>
-          <!-- The various order buttons goes here !-->
-        </div>
-
-      </div>
-
-    </div>
-
-    <div id="popups" v-cloak>
-      <div id="resetPopup" v-if="askReset" class="popup">
-        <div id="resetPopupMain" class="popupMain">
-          <h1>Avbryt beställning?</h1>
-          <button id="cancelYes" class="cancelOption" type="button" onclick="resetPage()" v-on:click="askReset = false">Ja</button>
-          <button id="cancelNo" class="cancelOption"  type="button" v-on:click="askReset = false">Nej</button>
-        </div>
-      </div>
-      <div id="orderPopup" v-if="orderPlaced" class="popup">
-        <div id="orderPopupMain" class="popupMain">
-          <h1>Beställning genomförd</h1>
-          <button type="button" onclick="resetPage()" v-on:click="orderPlaced = false">Ok</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Script imports !-->
     <script src="/vue/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
