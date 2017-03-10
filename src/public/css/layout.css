@@ -40,7 +40,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 7vh;
+    font-size: 4.5vh;
     position: relative;
     border: solid 0.5vh;
 }
@@ -50,8 +50,28 @@ body {
     width: 5vw;
 }
 
-.orderButtons:active {
+button:disabled {
+  opacity: 0.4;
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(30%);
+}
+
+.cancelOption {
+    border-bottom: 5px solid #C0C0C0;
+    border-right: 2px solid #C0C0C0;
+}
+
+#cancelYes:active {
+    border-bottom: 1px solid;
+}
+
+#cancelNo:active {
+    border-bottom: 1px solid;
+}
+
+.orderButtons:enabled:active {
     background-color: #3e8e41;
+    border: 2px solid #C0C0C0;
 }
 
 .foodName {
@@ -144,6 +164,13 @@ body {
     height: 18vh;
     width: 7vw;
     margin: 1vh 0.2vw 1vh 0.2vw;
+    border-bottom: 7px solid #C0C0C0;
+    border-radius: 10px;
+}
+
+.addFood:enabled:active {
+    margin-top: 10px;
+    border-bottom: 1px solid;
 }
 
 .foodImage {
@@ -282,8 +309,19 @@ block {
     height: 4vh;
 }
 
+#resetOrder:enabled:active {
+    margin-top: 10px;
+    border-bottom: 1px solid;
+}
+               
+
 #resetOrder {
-    font-size: 50px;
+    margin-top: 2vh;
+    width: 200px;
+    font-size: 40px;
+    border-bottom: 7px solid #C0C0C0;
+    border-radius: 10px;
+    background-color: #FFFF00;
 }
 
 /* Hide all Vue code until loaded */

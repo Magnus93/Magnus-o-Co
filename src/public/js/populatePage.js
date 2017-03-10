@@ -6,24 +6,8 @@ var commonData = {
   orderPlaced: false
 };
 
-
-var foodVM = new Vue({
-  el: '#food_area',
-  data: commonData,
-  methods: {
-  }
-});
-
-
-var drinkVM = new Vue({
-  el: '#drink_area',
-  data: commonData,
-  methods: {
-  }
-});
-
-var orderVM = new Vue({
-  el: '#order_area',
+var vm = new Vue({
+  el: '#main',
   data: commonData,
   methods: {
   },
@@ -42,13 +26,9 @@ var orderVM = new Vue({
         }
       }
       return sum;
+    },
+    canPlaceOrder: function () {
+      return this.totalSum != 0;
     }
-  }
-});
-
-var popupVM = new Vue({
-  el: '#popups',
-  data: commonData,
-  methods: {
   }
 });
